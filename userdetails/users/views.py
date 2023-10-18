@@ -1,6 +1,9 @@
 from django.shortcuts import render, HttpResponse, get_object_or_404
 from .models import User
 
+def home(request):
+    return render(request, 'home.html')
+
 def users_table(request):
     if request.method == 'POST':
         # Insert data into the database
